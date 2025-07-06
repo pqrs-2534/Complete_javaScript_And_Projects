@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="background-color: #333;">
+  <div class="xyz">
+    <button onclick="
+      genrateComputerChoice() 
+      result=genrateResult(computerChoice,'bat')
+      alertMessage('bat',computerChoice,result)
+
+      ">bat</button>
+    <button onclick="
+    genrateComputerChoice() 
+    result=genrateResult(computerChoice,'ball')
+    alertMessage('ball',computerChoice,result)
+
+    ">ball</button>
+    <button onclick="
+    genrateComputerChoice() 
+    result=genrateResult(computerChoice,'stump')
+    alertMessage('stump',computerChoice,result)
+    ">stump</button>
+  </div>
+
+  <script>
+    let yourMessage
+    let result;
+
+    function genrateComputerChoice() {
+      let randomChoice = (Math.random()) * 3
+      if (randomChoice > 0 && randomChoice <= 1) {
+        computerChoice = 'bat'
+        // console.log('computer choose bat')
+      } else if (randomChoice > 1 && randomChoice <= 2) {
+        computerChoice = 'ball'
+        //console.log('computer choice is ball')
+      } else {
+        computerChoice = 'stump'
+        //console.log('computer choice is stump')
+      }
+    }
+    function genrateResult(computerMove, userMove) {
+      if (userMove === 'bat') {
+        if (computerMove === userMove) {
+          showresult.tie++
+          return 'its tie'
+        } else if (computerMove === 'ball') {
+          showresult.won++
+          return 'user won'
+          
+        }
+        else if (computerMove === 'stump') {
+          showresult.lose++
+          return 'computer won'
+        }
+      } else if (userMove === 'ball') {
+        if (computerMove === 'bat') {
+          showresult.lose++
+          return 'computer won'
+        } else if (computerMove === userMove) {
+          showresult.tie++
+          return 'its tie'
+        }
+        else if (computerMove === 'stump') {
+          showresult.won++
+          return 'user won'
+        }
+      } else if (userMove === 'stump') {
+        if (computerMove === 'bat') {
+          showresult.won++
+          return 'user won'
+          
+        } else if (computerMove === userMove) {
+          showresult.tie++
+          return 'its tie'
+        }
+        else if (computerMove === 'ball') {
+          showresult.lose++
+          return 'computer won'
+          
+        }
+      }
+    }
+    let showresult={
+      won:0,
+      lose:0,
+      tie:0,
+    }
+
+    function alertMessage(userMove,computerMove,result) {
+      console.log(showresult)
+      alert(`your choice is: ${userMove}. ` + ` computer choice is: ${computerMove}. ` +
+       
+      ` ${result}. `
+
+       +`win:${showresult.won} , loss:${showresult.lose} , tie:${showresult.tie}`)
+    }
+  </script>
+</body>
+
+</html>

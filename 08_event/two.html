@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #414141; color:azure">
+    <h1>CHAI AUR CODE</h1>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+    const sayhitesh = function () {
+        console.log('hitesh');
+
+    }
+
+    // setTimeout(sayhitesh,2000)
+
+    
+const changetext=function(){
+    document.querySelector('h1').innerHTML='Best Js Course Ever'
+}
+
+   const changeme= setTimeout(changetext, 2000)
+   document.querySelector('#stop').addEventListener('click',function () {
+    clearTimeout(changeme)
+    console.log("stopped")
+   })
+</script>
+
+</html>

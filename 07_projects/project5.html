@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="addvalue=addvalue+1;  document.querySelector('.hello').innerText=`your bag has item ${addvalue}`">add
+    to bag</button>
+  <button onclick="addvalue-=1;  document.querySelector('.hello').innerText=`your bag has item ${addvalue}`">move to
+    wishlist</button>
+  <button onclick="addvalue +=2;  document.querySelector('.hello').innerText=`your bag has item ${addvalue}`">Add
+    1+1</button>
+  <h1 class="hello"></h1>
+
+
+  <script>
+    let addvalue = 0
+    const value = document.querySelector('.hello').innerText = `your bag has item ${addvalue}`
+  </script>
+
+</body>
+
+</html>

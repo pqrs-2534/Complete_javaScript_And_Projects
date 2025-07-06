@@ -1,0 +1,30 @@
+.xyz{
+  text-align: center;
+}
+
+.btn{
+  width: 100px;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  gap: 2rem;
+  background-color: rgb(54, 49, 58);
+  cursor: pointer;
+}
+.image{
+  width: 75px;
+  border-radius: 50%;
+}
+.text{
+  color:white ;
+  text-align: center;
+}
+.rst{
+  width: 10rem;
+  border-radius: 2rem;
+  background-color: rgb(97, 11, 11);
+  border: none;
+}
+.rest{
+  width: 5rem;
+}

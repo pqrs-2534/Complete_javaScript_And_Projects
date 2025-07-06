@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <script>
+    // const Product={
+    //      name:"tshirt",
+    //      brand:'mango',
+    //      price:756,
+    //      rating:{
+    //       stars:4.5,
+    //       noOfReviews:500,
+    //      }
+    // }
+
+    // console.log(Product)
+    // //conversion of string into JSON
+    // let str=JSON.stringify(Product)
+    // console.log(str)
+
+    // //again conversion of JSON INTO Object
+    // const newProduct=JSON.parse(str)
+    // console.log(newProduct)
+
+    // localStorage.setItem('Name','Kgcoding');
+    // localStorage.setItem('price','7689');
+   console.log(localStorage.getItem('Name'))
+   console.log(localStorage.getItem('price'))
+
+    const Product={
+         name:"tshirt",
+         brand:'mango',
+         price:756,
+         rating:{
+          stars:4.5,
+          noOfReviews:500,
+         }
+    }
+
+    localStorage.setItem('product',JSON.stringify(Product))
+    console.log(localStorage.getItem('product'))
+
+
+  </script>
+</body>
+</html>
